@@ -134,7 +134,7 @@ export const login = catchAsyncErrors(async (req,res,next)=> {
             return next(new ErrorHandler("Invalid Email or password.",400))
         }
         sendToken(user,200,"User login successfully.",res);
-})
+})  
 
 export const logout=catchAsyncErrors(async (req,res,next)=>{
     res.status(200).cookie("token","",{
@@ -191,7 +191,7 @@ try {
     await user.save({validateBeforeSave:false});
     return next(new ErrorHandler(err.message,500))
 }
-}) ;
+}) ; 
 
 export const resetPassword = catchAsyncErrors(async (req,res,next)=>{
     const{token}=req.params;
