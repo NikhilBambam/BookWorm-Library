@@ -1,3 +1,4 @@
 node_modules/
 LMSdes.text/
+config.env
 config/
