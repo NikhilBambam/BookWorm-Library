@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import logo_with_title from "../assets/logo-with-title.png";
 import logoutIcon from "../assets/logout.png";
 import closeIcon from "../assets/white-close-icon.png";
@@ -8,6 +8,10 @@ import catalogIcon from "../assets/catalog.png";
 import settingIcon from "../assets/setting-white.png";
 import usersIcon from "../assets/people.png";
 import { RiAdminFill } from "react-icons/ri";
+import{useDispatch,useSelector} from "react-redux";
+import {toast} from "react-toastify";
+import { toggleAddNewAdminPopup } from "../store/slices/popUpSlice";
+import AddNewAdmin from "../popups/AddNewAdmin";
 
 const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
   const dispatch = useDispatch();
@@ -40,6 +44,7 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
         } z-10 transition-all duration-700 md:relative md:left-0 flex w-64 bg-black text-white flex-col h-full`}
         style={{ position: "fixed" }}
       >
+        
         <div className="px-6 py-4 my-8">
           <img src={logo_with_title} alt="logo" />
         </div>
@@ -56,8 +61,8 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
           >
             <img src={bookIcon} alt="books" /> <span>Books</span>
           </button>
-          {isAuthenticated && user?.role === "Admin" && (
-            <>
+           {isAuthenticated && user?.role === "Admin" && (
+            <> 
               <button
                 onClick={() => setSelectedComponent("Catalog")}
                 className="w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
@@ -76,8 +81,8 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
               >
                 <RiAdminFill className="w-6 h-6" /> <span>Add New Admin</span>
               </button>
-            </>
-          )}
+             </> 
+           )} 
           {isAuthenticated && user?.role === "User" && (
             <button
               onClick={() => setSelectedComponent("My Borrowed Books")}
@@ -89,7 +94,7 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
           )}
           <button
             onClick={() => dispatch(toggleSettingPopup())}
-            className="md:hidden w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
+            className=" w-full py-2 font-medium bg-transparent rounded-md hover:cursor-pointer flex items-center space-x-2"
           >
             <img src={settingIcon} alt="setting" />{" "}
             <span>Update Credentials</span>
@@ -108,9 +113,12 @@ const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
           alt="closeIcon"
           onClick={() => setIsSideBarOpen(!isSideBarOpen)}
           className="h-fit w-fit absolute top-0 right-4 mt-4 block md:hidden"
-        />
+        /> 
+ 
+       
       </aside>
-      {addNewAdminPopup && <AddNewAdmin />}
+      {addNewAdminPopup && <AddNewAdmin/>}
+      
     </>
   );
 };
