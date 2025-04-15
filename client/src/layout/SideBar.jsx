@@ -12,6 +12,8 @@ import{useDispatch,useSelector} from "react-redux";
 import {toast} from "react-toastify";
 import { toggleAddNewAdminPopup } from "../store/slices/popUpSlice";
 import AddNewAdmin from "../popups/AddNewAdmin";
+import { resetAuthSlice } from "../store/slices/authSlice";
+import { logout } from "../store/slices/authSlice";
 
 const SideBar = ({ isSideBarOpen, setIsSideBarOpen, setSelectedComponent }) => {
   const dispatch = useDispatch();

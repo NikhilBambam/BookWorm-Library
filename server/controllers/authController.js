@@ -68,7 +68,7 @@ export const verifyOTP = catchAsyncErrors(async(req,res,next)=>{
     }).sort({created: -1});
 
 
-    if(userAllEnteries === 0)
+    if(userAllEnteries.length === 0)
     {
         return next(new ErrorHandler("User not found",404))
     }
