@@ -108,7 +108,7 @@ const userSlice = createSlice({
 export const fetchAllUsers = () => async (dispatch) => {
     dispatch(userSlice.actions.fetchAllUsersRequest());
     try {
-        const res = await axios.get("http://localhost:4000/api/v1/user/all", { withCredentials: true });
+        const res = await axios.get("https://bookworm-library.onrender.com/api/v1/user/all", { withCredentials: true });
         dispatch(userSlice.actions.fetchAllUsersSuccess(res.data.users));
     } catch (err) {
         const message = err.response?.data?.message || "Failed to fetch users";
