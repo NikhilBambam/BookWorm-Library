@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import settingIcon from "../assets/setting.png";
 import userIcon from "../assets/user.png";
@@ -28,8 +29,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="absolute top-0 left-0 right-0 bg-white w-full py-4 px-6 shadow-md flex justify-between items-center z-10">
-      {/* left side */}
+    <header className="absolute top-0 left-0 right-0 bg-white w-full py-6 px-6 shadow-md flex justify-between items-center z-10">
+      
       <div className="flex items-center gap-2">
         <img src={userIcon} alt="userIcon" className="w-8 h-8" />
         <div className="flex flex-col">
@@ -38,7 +39,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* right side */}
+     
       <div className="hidden md:flex items-center gap-2">
         <div className="flex flex-col text-sm lg:text-base items-end font-semibold">
           <span>{currentTime}</span>
@@ -47,8 +48,10 @@ const Header = () => {
         <span className="bg-black h-13 w-[2px]"></span>
         <img src={settingIcon} alt="settingIcon" className="w-8 h-8 cursor-pointer" onClick={() => dispatch(toggleSettingPopup())} />
       </div>
+      
     </header>
   );
 };
 
 export default Header;
+

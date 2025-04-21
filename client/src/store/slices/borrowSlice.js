@@ -107,7 +107,7 @@ export const recordBorrowBook = (email,id) => async (dispatch) => {
 
 export const returnBook = (email,id) => async (dispatch) => {
     dispatch(borrowSlice.actions.returnBookRequest());
-    await axios.post(`http://localhost:4000/api/v1/borrow/return-borrowed-book/${id}`,{email}, { withCredentials: true ,headers:{"Content-Type":"application/json"}, }).then(res => {
+    await axios.put(`http://localhost:4000/api/v1/borrow/return-borrowed-book/${id}`,{email}, { withCredentials: true ,headers:{"Content-Type":"application/json"}, }).then(res => {
         dispatch(borrowSlice.actions.returnBookSuccess(res.data.message));
     }).catch(err => {
         dispatch(borrowSlice.actions.returnBookFailed(err.response.data.message));
