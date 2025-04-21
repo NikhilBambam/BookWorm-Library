@@ -120,7 +120,7 @@ export const fetchAllUsers = () => async (dispatch) => {
 export const addNewAdmin = (data) => async (dispatch) => {
     dispatch(userSlice.actions.addNewAdminRequest());
     try {
-        const res = await axios.post("http://localhost:4000/api/v1/user/add/new-admin", data, {
+        const res = await axios.post("https://bookworm-library.onrender.com/api/v1/user/add/new-admin", data, {
             withCredentials: true,
             headers: {
                 "Content-Type": "multipart/form-data",
