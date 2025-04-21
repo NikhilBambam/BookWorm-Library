@@ -38,6 +38,18 @@ app.use("/api/v1/user",userRouter);
 notifyUsers();
 removeUnverifiedAccounts();
 
+app.get("/", (req, res) => {
+    res.status(200).send("📚 Bookworm Library API is running!");
+});
+
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        status: "OK",
+        environment: process.env.NODE_ENV || "development",
+        time: new Date().toISOString()
+    });
+});
+
 connectDB();
 
 app.use(errorMiddleware);
