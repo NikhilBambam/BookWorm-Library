@@ -73,6 +73,7 @@ const data = {
               <span className="bg-gray-300 h-20 lg:h-full min-w-20 flex justify-center items-center rounded-lg">
                 <img src={bookIcon} alt="book-icon" className="w-8 h-8"/>
               </span>
+              <h4 className="font-black text-3xl">{totalBorrowedBooks}</h4>
               <p className="text-lg xl:text-xl font-semibold">Your Borrowed book List</p>
             </div>
             <div className="flex items-center gap-3 bg-white p-5 min-h-[120px] rounded-lg transition hover:shadow-inner duration-300">
@@ -80,6 +81,7 @@ const data = {
               <span className="bg-gray-300 h-20 lg:h-full min-w-20 flex justify-center items-center rounded-lg">
                 <img src={returnIcon} alt="book-icon" className="w-8 h-8"/>
               </span>
+              <h4 className="font-black text-3xl">{totalReturnedBooks}</h4>
               <p className="text-lg xl:text-xl font-semibold">Your Returned book List</p>
             </div>
           </div>
