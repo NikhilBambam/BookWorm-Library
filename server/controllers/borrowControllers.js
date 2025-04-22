@@ -33,7 +33,7 @@ export const getBorrowedBooksForAdmin=catchAsyncErrors(async(req,res,next)=>
     {
         return next(new ErrorHandler("Book not found.",400));
     }
-    const user = await User.findOne({email,role:"Admin",accountVerified:true});
+    const user = await User.findOne({email,accountVerified:true});
     if(!user)
     {
         return next(new ErrorHandler("User not found.",404));
