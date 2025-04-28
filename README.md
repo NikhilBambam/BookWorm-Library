@@ -2,45 +2,30 @@
 A full-stack Library Management System built with React (Frontend) and Node.js, Express, MongoDB (Backend).
 The system supports user authentication, book management, borrowing/returning system, admin management, and automated services like sending reminders and account cleanup.
 
+🚀 Live Demo :-https://bookworm-library-1.onrender.com
+
 ✨ Features
-User Registration with OTP Email Verification
-
-JWT-based Authentication and Authorization
-
-Password Reset and Update
-
-Admin and User Roles
-
-Book Management (Add, View, Delete)
-
-Borrow and Return Books with Fine Calculation
-
-Cloudinary Integration for Media Uploads
-
-Automated Email Notifications for Due Books
-
-Automatic Removal of Unverified Accounts
-
-Secure API with Error Handling
+🔹User Registration with OTP Email Verification
+🔹JWT-based Authentication and Authorization
+🔹Password Reset and Update
+🔹Admin and User Roles
+🔹Book Management (Add, View, Delete)
+🔹Borrow and Return Books with Fine Calculation
+🔹Cloudinary Integration for Media Uploads
+🔹Automated Email Notifications for Due Books
+🔹Automatic Removal of Unverified Accounts
+🔹Secure API with Error Handling
 
 🛠 Backend Tech Stack
-Node.js
-
-Express.js
-
-MongoDB with Mongoose
-
-Cloudinary (for file storage)
-
-Nodemailer (for email services)
-
-bcrypt (for password hashing)
-
-JWT (JSON Web Tokens for authentication)
-
-Node-cron (for scheduling automated tasks)
-
-dotenv (environment variables)
+🔹Node.js
+🔹Express.js
+🔹MongoDB with Mongoose
+🔹Cloudinary (for file storage)
+🔹Nodemailer (for email services)
+🔹bcrypt (for password hashing)
+🔹JWT (JSON Web Tokens for authentication)
+🔹Node-cron (for scheduling automated tasks)
+🔹dotenv (environment variables)
 
 🛠 Frontend Tech Stack
 React.js
@@ -48,33 +33,35 @@ React.js
 
 📋 API Endpoints Overview
 
-Method	Endpoint	Description
-POST	/api/auth/register	Register User
-POST	/api/auth/verify-otp	Verify OTP
-POST	/api/auth/login	Login User
-POST	/api/auth/forgot-password	Forgot Password Request
-PUT	 /api/auth/reset-password	Reset Password
-GET	/api/auth/logout	Logout User
-GET	/api/user/profile	Get Logged-in User Profile
-POST	/api/book/add	Add Book (Admin Only)
-GET 	/api/book/all	Get All Books
-DELETE	/api/book/:id	Delete Book (Admin Only)
-POST	/api/borrow/borrow	Borrow Book
-POST	/api/borrow/return	Return Borrowed Book
-GET	/api/borrow/user	Get Borrowed Books (User)
-GET	/api/borrow/admin	Get Borrowed Books (Admin)
+
+| Method | Endpoint                | Description                  |
+| :----- | :---------------------- | :--------------------------- |
+| POST   | /api/auth/register       | Register User                |
+| POST   | /api/auth/verify-otp      | Verify OTP                   |
+| POST   | /api/auth/login           | Login User                   |
+| POST   | /api/auth/forgot-password | Forgot Password Request      |
+| PUT    | /api/auth/reset-password  | Reset Password               |
+| GET    | /api/auth/logout          | Logout User                  |
+| GET    | /api/user/profile         | Get Logged-in User Profile   |
+| POST   | /api/book/add             | Add Book (Admin Only)        |
+| GET    | /api/book/all             | Get All Books                |
+| DELETE | /api/book/:id             | Delete Book (Admin Only)     |
+| POST   | /api/borrow/borrow        | Borrow Book                  |
+| POST   | /api/borrow/return        | Return Borrowed Book         |
+| GET    | /api/borrow/user          | Get Borrowed Books (User)    |
+| GET    | /api/borrow/admin         | Get Borrowed Books (Admin)   |
 
 📦 Installation & Setup
 
-Clone the repository
+🔴Clone the repository
 git clone https://github.com/your-username/library-management-system.git
 cd library-management-system/backend
 
-Install dependencies
+🔴Install dependencies
 npm install
 
 
-Create a config/config.env file and add the following environment variables:
+🔴Create a config/config.env file and add the following environment variables:
 
 PORT=4000
 FRONTEND_URL=http://localhost:3000
