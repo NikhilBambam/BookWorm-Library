@@ -1,6 +1,5 @@
 📚 Library Management System
-A full-stack Library Management System built with React (Frontend) and Node.js, Express, MongoDB (Backend).
-The system supports user authentication, book management, borrowing/returning system, admin management, and automated services like sending reminders and account cleanup.
+A full-stack Library Management System built with React (Frontend) and Node.js, Express, MongoDB (Backend).The system supports user authentication, book management, borrowing/returning system, admin management, and automated services like sending reminders and account cleanup.
 
 🚀 Live Demo :-https://bookworm-library-1.onrender.com
 
