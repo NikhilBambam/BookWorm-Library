@@ -79,7 +79,7 @@ const Login = () => {
             </div>
             <Link to={"/password/forgot"} className="font-semibold rounded-md text-black mb-12 ">Forgot Password ?</Link>
             <div className="block md:hidden font-semibold mt-5">
-              <p>New to our platform ? <Link t0={"/register"} className="text-sm text-gray-500 hover:underline">Sign up</Link></p>
+              <p>New to our platform ? <Link to={"/register"} className="text-sm text-gray-500 hover:underline">Sign up</Link></p>
             </div>
             <button
               type="submit"
